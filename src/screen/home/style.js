@@ -1,0 +1,147 @@
+import {StyleSheet} from 'react-native';
+import {
+  hp,
+  hpValue,
+  isNotchDisplay,
+  statusBarHeight,
+  wp,
+  wpValue,
+} from '../../helper/utils';
+import {fontFamily, fontSize, fontSizeValue} from '../../helper/fontUtils';
+import {colors} from '../../helper/colors';
+
+export const style = StyleSheet.create({
+  containerStyle: {
+    flex: 1,
+    paddingTop: isNotchDisplay ? hp(7) : hp(7) - statusBarHeight,
+    backgroundColor: colors.white,
+  },
+  titleTextStyle: {
+    marginLeft: wp(8.27),
+    fontSize: fontSizeValue(24),
+    lineHeight: hp(5.05),
+    fontFamily: fontFamily.bentonBold,
+    color: colors.textTitle,
+  },
+  iconsWrapperStyle: {
+    flexDirection: 'row',
+    position: 'absolute',
+    right: wp(10.4),
+  },
+  iconContainerStyle: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: hpValue(45),
+    height: hpValue(45),
+    borderRadius: hp(1),
+    shadowOffset: {
+      width: wp(1),
+      height: hp(1),
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    shadowColor: 'rgba(20, 78, 90, 0.2)',
+    elevation: 5,
+    backgroundColor: '#f4fcff',
+  },
+  settingIconContainerStyle: {
+    marginLeft: wpValue(15),
+  },
+  iconStyle: {
+    width: hpValue(23),
+    height: hpValue(23),
+    resizeMode: 'contain',
+  },
+  cardTitle: {
+    fontSize: fontSizeValue(18),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: hpValue(10),
+  },
+  babyListItemContainerStyle: {
+    padding: hpValue(20),
+    borderRadius: hpValue(20),
+  },
+  card: {
+    backgroundColor: 'white',
+    borderRadius: hpValue(20),
+    borderWidth: 1,
+    borderColor: '#ccc',
+    margin: wp(6.67),
+    elevation: 2,
+  },
+  label: {
+    fontWeight: 'bold',
+    fontSize: fontSize(1.72),
+    lineHeight: hp(1.72),
+    textAlignVertical: 'center',
+    fontFamily: fontFamily.bentonRegular,
+    letterSpacing: wp(0.13),
+    color: '#3B3B3B',
+    marginTop: hp(2),
+  },
+  value: {
+    fontWeight: 'normal',
+    fontSize: fontSize(1.72),
+    marginBottom: hpValue(5),
+    flexDirection: 'row',
+    fontFamily: fontFamily.bentonRegular,
+  },
+  contentContainerStyle: {
+    width: '90%',
+    alignSelf: 'center',
+    paddingVertical: hpValue(15),
+    paddingHorizontal: wpValue(16),
+    borderRadius: hpValue(5),
+    backgroundColor: colors.white,
+    elevation: 3,
+  },
+  modalTitleTextStyle: {
+    fontSize: fontSizeValue(18),
+    lineHeight: hpValue(20),
+    fontFamily: fontFamily.bentonMedium,
+    color: colors.textTitle,
+    textAlign: 'center',
+  },
+  inputTitleTextStyle: {
+    fontSize: fontSize(1.72),
+    lineHeight: hp(1.72),
+    textAlignVertical: 'center',
+    fontFamily: fontFamily.bentonRegular,
+    letterSpacing: wp(0.13),
+    color: '#3B3B3B',
+    marginTop: hp(2),
+  },
+  inputContainerStyle: {
+    height: hp(7.02),
+    backgroundColor: colors.white,
+    borderColor: '#F4F4F4',
+    marginTop: hp(0.75),
+  },
+  closeIconStyle: {
+    width: hpValue(24),
+    height: hpValue(24),
+  },
+  closeIconContainerStyle: {
+    position: 'absolute',
+    right: hpValue(7),
+    top: hpValue(7),
+  },
+  seeHearingResultsButton: {
+    backgroundColor: colors.lightParrot10,
+    borderWidth: 1,
+    borderColor: colors.lightParrot,
+    paddingVertical: hpValue(5),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: hpValue(50),
+    marginHorizontal: wp(6.67),
+    marginTop: hp(2),
+  },
+  seeHearingResultsButtonText: {
+    fontFamily: fontFamily.bentonMedium,
+    color: colors.textTitle,
+    fontSize: fontSizeValue(16),
+    lineHeight: hpValue(20),
+  },
+});
